@@ -79,7 +79,7 @@ The `password` parameter is optional and can be used to authenticate to the Velb
 - port: 6000
 - password: leave empty
 
-#### Example: hassio add-on
+#### Example: Home Assistant add-on
 
 - tls: depending on your configuration
 - host: your Home Assistant IP address
