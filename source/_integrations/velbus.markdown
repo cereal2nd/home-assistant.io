@@ -34,15 +34,57 @@ The **Velbus** {% term integration %} is used to control [Velbus](https://www.ve
 
 {% include integrations/config_flow.md %}
 
-### Configuration parameters
+## Configuration parameters
 
-The port string used in the user interface or the configuration file can have different formats depending on the type of connection:
+During the setup you will be shown 2 choises on ways to connect to the Velbus bus:
+
+- USB
+- TCP/IP
+
+### USB
+
+The USB connection is a way to connect to the Velbus bus. You will need a Velbus USB interface to connect to the bus. The USB interface is connected to the USB port of your Home Assistant device.
+The interface usb devices are automatically detected and shown in a list.
+Select the correct USB interface from the list and click on submit.
+
+There will be a connection test to make sure the connection is working, and if its working the integration will be added to Home Assistant.
 
 
-- For a serial or USB devices: `/dev/ttyUSB00`
-- For a TCP/IP devices: `127.0.0.1:3678`
-- For Signum devices without authentication: `tls://192.168.1.9:27015`
-- For Signum devices with authentication: `tls://password@192.168.1.9:27015`
+### TCP/IP
+
+The TCP/IP connection is a way to connect to the Velbus bus. You will need a Velbus TCP/IP interface available in your network.
+
+There are a couple of parameters you need to fill in to connect to the Velbus bus:
+- tls
+- host
+- port
+- password
+
+The `tls` parameter is optional and can be used to enable or disable the TLS connection.
+The `host` parameter is the IP address of the Velbus TCP/IP interface.
+The `port` parameter is the port number of the Velbus TCP/IP interface.
+The `password` parameter is optional and can be used to authenticate to the Velbus TCP/IP interface.
+
+#### Example: signum
+
+- tls: yes
+- host: your signum ip address
+- port: 27015
+- password: your signum password (if configured)
+
+#### Example: velser
+
+- tls: no
+- host: your velser ip address
+- port: 6000
+- password: leave empty
+
+#### Example: hassio addon
+
+- tls: depending on your configuration
+- host: your hassio ip address
+- port: 27015 if you kept the default
+- password: leave empty
 
 {% note %}
 The pushbutton LEDs of input modules are disabled by default. These can be enabled from the **Devices** panel in the **Configuration** page of the web interface.
