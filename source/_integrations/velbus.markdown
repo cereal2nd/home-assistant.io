@@ -36,7 +36,7 @@ The **Velbus** {% term integration %} is used to control [Velbus](https://www.ve
 
 ## Configuration parameters
 
-During the setup you will be shown 2 choises on ways to connect to the Velbus bus:
+During the setup you will be shown 2 choices on ways to connect to the Velbus bus:
 
 - USB
 - TCP/IP
@@ -47,14 +47,14 @@ The USB connection is a way to connect to the Velbus bus. You will need a Velbus
 The interface USB devices are automatically detected and shown in a list.
 Select the correct USB interface from the list and click on submit.
 
-There will be a connection test to make sure the connection is working, and if its working the integration will be added to Home Assistant.
-
+There will be a connection test to make sure the connection is working, and if it's working the integration will be added to Home Assistant.
 
 ### TCP/IP
 
 The TCP/IP connection is a way to connect to the Velbus bus. You will need a Velbus TCP/IP interface available in your network.
 
 There are a couple of parameters you need to fill in to connect to the Velbus bus:
+
 - tls
 - host
 - port
