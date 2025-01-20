@@ -44,7 +44,7 @@ During the setup you will be shown 2 choises on ways to connect to the Velbus bu
 ### USB
 
 The USB connection is a way to connect to the Velbus bus. You will need a Velbus USB interface to connect to the bus. The USB interface is connected to the USB port of your Home Assistant device.
-The interface usb devices are automatically detected and shown in a list.
+The interface USB devices are automatically detected and shown in a list.
 Select the correct USB interface from the list and click on submit.
 
 There will be a connection test to make sure the connection is working, and if its working the integration will be added to Home Assistant.
@@ -68,21 +68,21 @@ The `password` parameter is optional and can be used to authenticate to the Velb
 #### Example: signum
 
 - tls: yes
-- host: your signum ip address
+- host: your signum IP address
 - port: 27015
 - password: your signum password (if configured)
 
 #### Example: velser
 
 - tls: no
-- host: your velser ip address
+- host: your velser IP address
 - port: 6000
 - password: leave empty
 
-#### Example: hassio addon
+#### Example: hassio add-on
 
 - tls: depending on your configuration
-- host: your hassio ip address
+- host: your Home Assistant IP address
 - port: 27015 if you kept the default
 - password: leave empty
 
